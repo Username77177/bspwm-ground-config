@@ -1,5 +1,7 @@
 #!/bin/bash
 # Внимание! Этот скрипт нужен для того, чтобы использовать ПК по технике томата. Этот скрипт запускается при запуске bspwm.
+sleep 7 # Loading system
+
 while :
 do
 	notify-send "Display will turn off in 30 minutes"
