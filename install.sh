@@ -9,7 +9,6 @@ chmod +x $HOME/.config/sxhkd/sxhkdrc
 
 # Installing Rofi, Compton, Fira Code
 sudo apt install curl wget feh
-echo "После того, как oh-my-zsh установится на ваш ПК, пожалуйста, выйдите из него нажав Ctrl+D или написав 'exit'"
 sleep 5
 
 ## Installing Mousepad config
@@ -29,7 +28,9 @@ ln -sfr config/XRESOURCES-for-all ~/.Xresources
 # Alacritty,tmux, Vim and Doom Emacs
 sudo add-apt-repository ppa:mmstick76/alacritty
 sudo add-apt-repository ppa:kelleyk/emacs
-sudo apt install vim emacs26 alacritty curl
+sudo apt install vim emacs26 alacritty curl tmux
+ln -sfr config/alacritty.yml ~/.alacritty.yml
+ln -sfr config/tmux.conf ~/.tmux.conf
 ## Installing plug.vim
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ##
@@ -49,6 +50,7 @@ sudo apt install ranger python3 python3-pip gcc gdb
 sudo npm install prettier -g
 
 # Installing font-awesome and Zsh
+echo "После того, как oh-my-zsh установится на ваш ПК, пожалуйста, выйдите из него нажав Ctrl+D или написав 'exit'"
 cd ~
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 cp ./config/zshrc ~/.zshrc
