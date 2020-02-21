@@ -1,11 +1,14 @@
 #!/bin/sh
 # XWINWRAP and bind-programm
 sxhkd &
-./save_your_eyes.sh
+$HOME/bspwm-ground-config/save_your_eyes.sh
 #xwinwrap -g 1920x1080 -ov -ni -s -nf --gifview -w WID ~/wallpaper.gif -a &
+
+#Вставьте вместо `~/wallpaper.jpg` путь к своим обоям
 feh --bg-scale ~/wallpaper.jpg &
+
 # Polybar
-$HOME/bspwm_configs_intall/launchpolybar.sh &
+$HOME/bspwm-ground-config/launchpolybar.sh &
 # Compton
 killall -q compton; compton --config ~/.config/compton.conf &
 # Dunst

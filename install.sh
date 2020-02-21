@@ -8,7 +8,7 @@ chmod +x $HOME/.config/bspwm/bspwmrc
 chmod +x $HOME/.config/sxhkd/sxhkdrc
 
 # Installing Zsh, Rofi, Compton, Fira Code
-sudo apt install zsh curl wget
+sudo apt install zsh curl wget feh
 echo "После того, как oh-my-zsh установится на ваш ПК, пожалуйста, выйдите из него нажав Ctrl+D или написав 'exit'"
 sleep 5
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
