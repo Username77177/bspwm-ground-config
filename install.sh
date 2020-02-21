@@ -2,17 +2,15 @@
 sudo apt install bspwm sxhkd
 mkdir $HOME/.config/bspwm
 mkdir $HOME/.config/sxhkd
-ln -sfr config/bspwmrc ~/.config/bspwm/bspwmrc
-ln -sfr config/sxhkdrc ~/.config/sxhkd/sxhkdrc
+ln -sfr bspwmrc ~/.config/bspwm/bspwmrc
+ln -sfr sxhkdrc ~/.config/sxhkd/sxhkdrc
 chmod +x $HOME/.config/bspwm/bspwmrc
 chmod +x $HOME/.config/sxhkd/sxhkdrc
 
-# Installing Zsh, Rofi, Compton, Fira Code
-sudo apt install zsh curl wget feh
+# Installing Rofi, Compton, Fira Code
+sudo apt install curl wget feh
 echo "После того, как oh-my-zsh установится на ваш ПК, пожалуйста, выйдите из него нажав Ctrl+D или написав 'exit'"
 sleep 5
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-ln -sfr ./config/zshrc ~/.zshrc
 
 ## Installing Mousepad config
 sudo ln -sfr config/40-libinput.conf /usr/share/X11/xorg.conf.d/40-libinput.conf
@@ -50,6 +48,8 @@ sudo apt install ranger python3 python3-pip gcc gdb
 ## Prettier for Vim
 sudo npm install prettier -g
 
-# Installing font-awesome
+# Installing font-awesome and Zsh
 cd ~
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+cp ./config/zshrc ~/.zshrc
 sudo npm install @fortawesome/fontawesome-free -g
