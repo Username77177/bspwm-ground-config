@@ -4,5 +4,5 @@
 # Установка
 
 ```code
-git clone https://github.com/Username77177/bspwm-ground-config.git ~/bspwm_dotfiles
+git clone https://github.com/Username77177/bspwm-ground-config.git
 ```
