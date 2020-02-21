@@ -9,11 +9,10 @@ do
 	notify-send "Display will turn off in 2 minutes for 5 minutes"
 	sleep 120
 	# an half hour
-
-	xset -display :0.0 dpms force off 
+	xrandr --output eDP-1 --off
 	# turn off display
 	sleep 300
 	# 5 minutes
-	xset -display :0.0 dpms force on 
+	xrandr --output eDP-1 --auto
 	# turn on display
 done
