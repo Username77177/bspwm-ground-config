@@ -8,7 +8,7 @@ killall -q polybar
 
 # Launch bar1 and bar2
 echo "---" | tee -a /tmp/topbar.log /tmp/bottombar.log
-polybar -c $HOME/dotfiles/bspwm/polybar.conf top >> /tmp/polybar1.log 2>&1 &
+polybar -c $HOME/bspwm-ground-config/polybar.conf top >> /tmp/polybar1.log 2>&1 &
 polybar bottom >> /tmp/polybar2.log 2>&1 &
 
 echo "Bars launched..."

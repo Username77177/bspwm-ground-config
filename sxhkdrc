@@ -61,6 +61,10 @@ XF86AudioPlay
 XF86AudioStop
 	mpc stop
 
+# Turn on screen
+super + shift + o
+	xrandr --output eDP-1 --auto
+
 # Screenshot
 Print
 	scrot ~/Pictures/"Screenshot `date +%F_%R`".png
@@ -75,7 +79,7 @@ super + shift + q
 
 # Закрыть данное окно
 super + q
-	bspc window -c
+	bspc node -k
 
 # Псевдо полное окно (без отступов)
 super + m

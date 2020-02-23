@@ -2,6 +2,7 @@
 # XWINWRAP and bind-programm
 sxhkd &
 $HOME/bspwm-ground-config/save_your_eyes.sh &
+$HOME/bspwm-ground-config/notes.sh show &
 #xwinwrap -g 1920x1080 -ov -ni -s -nf --gifview -w WID ~/wallpaper.gif -a &
 
 #Вставьте вместо `~/wallpaper.jpg` путь к своим обоям
@@ -35,12 +36,12 @@ bspc config focus_follows_pointer true
 #RULES#
 #FM##
 bspc rule -a Nautilus desktop=^1
-bspc rule -a :"ranger" desktop=^1 state=floating follow=on
+bspc rule -a :Ranger desktop=^1 state=floating follow=on
 #WEB##
 bspc rule -a Firefox desktop=^2
 bspc rule -a Chromium desktop=^2
-bspc rule -a telegram-desktop desktop=^2 follow=on
-bspc rule -a discord desktop=^2
+bspc rule -a TelegramDesktop desktop=^1 follow=on
+bspc rule -a discord desktop=^1
 #TERMINALS##
 bspc rule -a Alacritty desktop=^3 follow=on
 bspc rule -a xterm desktop=^3 follow=on

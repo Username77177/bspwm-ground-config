@@ -7,9 +7,8 @@ ln -sfr sxhkdrc ~/.config/sxhkd/sxhkdrc
 chmod +x $HOME/.config/bspwm/bspwmrc
 chmod +x $HOME/.config/sxhkd/sxhkdrc
 
-# Installing Rofi, Compton, Fira Code
-sudo apt install curl wget feh
-sleep 5
+# Installing Soft
+sudo apt install curl wget feh scrot
 
 ## Installing Mousepad config
 sudo ln -sfr config/40-libinput.conf /usr/share/X11/xorg.conf.d/40-libinput.conf
@@ -51,6 +50,7 @@ sudo npm install prettier -g
 
 # Installing font-awesome and Zsh
 echo "После того, как oh-my-zsh установится на ваш ПК, пожалуйста, выйдите из него нажав Ctrl+D или написав 'exit'"
+sleep 3
 cd ~
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 cp ./config/zshrc ~/.zshrc
