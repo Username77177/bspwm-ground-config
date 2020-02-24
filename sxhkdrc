@@ -25,7 +25,7 @@ super + shift + e
 	emacs -fn 'Fira Code'
 
 super + shift + m
-	alacritty -t 'ranger' -e ranger
+	alacritty --class 'ranger' -e ranger
 
 super + shift + n
 	nautilus
@@ -119,6 +119,7 @@ super + f
 #TODO set the node flags
 super + ctrl + {x,y,z}
 	bspc node -g {locked,sticky,private}
+
 
 #
 # focus/swap

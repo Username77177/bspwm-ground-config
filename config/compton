@@ -21,7 +21,7 @@ shadow-exclude = [ "class_g = 'Cairo-clock'" ,
 # Duplicating the _NET_WM_STATE entries because compton cannot deal with atom arrays :-/
 opacity-rule = [
   "97:class_g = 'Termite' && !_NET_WM_STATE@:32a",
-
+  "99:class_g = 'Toolkit'",
   "0:_NET_WM_STATE@[0]:32a = '_NET_WM_STATE_HIDDEN'",
   "0:_NET_WM_STATE@[1]:32a = '_NET_WM_STATE_HIDDEN'",
   "0:_NET_WM_STATE@[2]:32a = '_NET_WM_STATE_HIDDEN'",

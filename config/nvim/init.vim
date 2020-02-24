@@ -1,3 +1,4 @@
+""""""""""""""PLUGINS
 call plug#begin()
 
 " FuzzyFinder (для быстрого поиска) (sudo npm install fzf)
@@ -25,23 +26,11 @@ Plug 'prettier/vim-prettier', {
 Plug 'iamcco/markdown-preview.nvim'
 Plug 'mhartington/oceanic-next'
 call plug#end()
-
-
-" Делаем Vim более функциональным
+"""""""""""""""""""""""""PLUGINS
+""""""""""""""""""UI
 set nocompatible
 set t_Co=256
-
 syntax enable
-
-" Функция для установки пакетов для COC
-function CocPacks()
-          :CocInstall coc-html
-          :CocInstall coc-emmet
-          :CocInstall coc-python
-  endf
-
-" Вызов функции с помощью <C-\>
-nmap <C-\> :call CocPacks()<CR>
 
 set expandtab
 set smarttab
@@ -53,20 +42,27 @@ set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
 
-" Конфигурация prettier
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html Prettier
+" Тема для **NeoVim**
+colorscheme OceanicNext
+""""""""""""""""""""UI
 
-" Конфигурация Emmet
-let g:user_emmet_leader_key='<C-L>' " Хоткей для того, чтобы активировать Emmet (на самом деле - <Ctrl+L+,>)
-let g:user_emmet_mode='a' " Emmet теперь доступен во всех режимах
-let g:user_emmet_install_global = 0 " Emmet не будет активироваться во всех файлах
-autocmd FileType html,css EmmetInstall " Emmet активируется только в файлах с расширением .html и .css
+""""""""""""""UX
+" Комбинация клавиш jkl - действует как Escape в режиме Insert
+inoremap jkl <ESC>
 
-" Автодополнение командной строки
-set wildignorecase
-set wildmode=full
-set wildmode=list:longest
-set completeopt=menuone,preview
+" Функция для установки пакетов для COC
+function CocPacks()
+          :CocInstall coc-html
+          :CocInstall coc-emmet
+          :CocInstall coc-python
+  endf
+
+" Вызов функции с помощью <C-\>
+nmap <C-\> :call CocPacks()<CR>
+"""""""""""""""""""UX
+
+""""""""""""""""""""""PLUGINS CONFIGURATION
+"""Closetag
 
 " Указываем расширения файлов в которых работает автодополнение тегов
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
@@ -74,35 +70,14 @@ let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
 " Автодополнение тегов HTML по умолчанию
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 
-" Комбинация клавиш jkl - действует как Escape в режиме Insert
-inoremap jkl <ESC>
-
-" Делаем так, чтобы навигация работала на русском языке
-nmap о j
-nmap л k
-nmap р h
-nmap д l
-nmap ш i
-nmap ф a
-nmap в d
+"""NERDTREE
 
 " В нормальном режиме Ctrl+f вызывает :NERDTree
 nmap <C-f> :NERDTreeToggle<CR>
 vmap ++ <plug>NERDCommenterToggle
-nmap ++ <plug>NERDCommenterToggl
+nmap ++ <plug>NERDCommenterToggle
 
-let g:NERDTreeGitStatusWithFlags = 1
-let g:NERDTreeIgnore = ['^node_modules$']
-
-" Тема для **NeoVim**
-" syntax on
-colorscheme OceanicNext
-
-" Переключения табов
-nmap <C-Y> :tabprevious<CR>
-nmap <C-O> :tabnext<CR>
-nmap <C-N> :tabnew<CR>
-nnoremap <C-C> :tabclose<CR>
+"""Lightline
 
 " Линия статуса: конфигурация
 set noshowmode " Табличка --INSERT-- больше не выводится на экран
@@ -117,6 +92,7 @@ let g:lightline = {
       \   'gitbranch': 'fugitive#head'
       \ },
       \ }
+
 
 "
 " 										Стандартная
@@ -138,8 +114,7 @@ set cmdheight=1
 set updatetime=300
 
 " don't give |ins-completion-menu| messages.
-set shortmess+=c
-
+set shortmess+=c 
 " always show signcolumns
 set signcolumn=yes
 

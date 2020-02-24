@@ -39,6 +39,7 @@ git clone https://github.com/hlissner/doom-emacs ~/.emacs.d
 ###
 rm -rf ~/.doom.d
 ln -sfr config/vimrc ~/.vimrc
+ln -sfr ~/bspwm-ground-config/config/nvim/ ~/.config/
 ln -sfr config/doom.d ~/.doom.d 
 ~/.emacs.d/bin/doom refresh
 
