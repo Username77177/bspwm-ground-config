@@ -5,7 +5,7 @@ sleep 7 # Loading system
 while :
 do
 	notify-send "Display will turn off in 30 minutes"
-	sleep 1680
+	sleep 1380
 	notify-send "Display will turn off in 2 minutes for 5 minutes"
 	sleep 120
 	# an half hour
