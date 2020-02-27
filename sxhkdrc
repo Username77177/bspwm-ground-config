@@ -39,6 +39,9 @@ super + shift + b
 super + shift + d
 	discord
 
+super + shift + c
+    code
+
 # Sound
 XF86AudioMute
 	amixer -D pulse sset Master toggle

@@ -1,16 +1,11 @@
 call plug#begin()
 
-" FuzzyFinder (для быстрого поиска) (sudo npm install fzf)
-Plug 'junegunn/fzf.vim'
 " NERDTree - быстрый просмотр файлов
 Plug 'preservim/nerdtree'
 " Сoc - автодополнение 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Линия статуса
 Plug 'itchyny/lightline.vim'
-" Темы
-Plug 'joshdick/onedark.vim'
-Plug 'cocopon/iceberg.vim'
 " Проверка Синтаксиса
 Plug 'scrooloose/syntastic' 
 " Плагин для закрытия скобок

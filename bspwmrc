@@ -19,7 +19,8 @@ dunst -config ~/.config/dunst/dunstrc &
 setxkbmap -model pc105 -layout us,ru -option grp:win_space_toggle &
 # Startup
 alacritty &
-emacs26 &
+#emacs26 &
+code
 bspc desktop -f ^1 &
 
 bspc monitor -d Desktop Web Terminal Editors
